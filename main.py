@@ -55,7 +55,18 @@ print(models.execute_kw(db, uid, password,
                         , {'fields': ['email', 'name', 'phone']}))
 
 # Ejercicio7
-ids = models.execute_kw(db, uid, password,
-                        'product.product', 'create',
-                        [{'name':'Consola'}])
-print(ids)
+productos = [['Playstation 5', 499.0], ['Nintendo Switch', 299.0], ['Xbox Series S', 299.0], ['Xbox Series X', 499.0],
+             ['Playstation 4', 299.0]]
+for i in :
+models.execute_kw(db, uid, password,
+                  'product.product', 'create',
+                  [{'name': [i], 'price': [i]}])
+
+# ids = models.execute_kw(db, uid, password,
+#                       'product.product', 'search',
+#                        [[['name', '=', 'Consola']]])
+# print(ids)
+
+# Ejercicio8
+models.execute_kw(db, uid, password, 'product.product', 'write', [[ids], {
+    'price': 100}])
